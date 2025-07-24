@@ -107,5 +107,28 @@
         </tr>
     </table>
 
+    <!-- <video>タグ -->
+    <video src="media/info.webm" controls="controls" width="350"></video>
+
+    <!-- <source>タグ/複数の端末に対応 -->
+    <video width="350" controls="controls">
+        <source src="media/info.webm"></source>
+        <source src="media/info.mp4"></source>
+    </video>
+
+    <!-- <canvas>タグ -->
+    <canvas id="canvasArea" width="300" height="300"></canvas>
+    <script>
+        const canvasId=document.getElementById('canvasArea');
+        const canvas=canvasId.getContext('2d');
+        canvas.clearRect(0,0,300,300);  //指定範囲の消去
+        canvas.strokeStyle="#000";  //黒色ペンの指定
+        canvas.strokeRect(0,0,300,300); //四角形の描画
+        canvas.strokeStyle="#000";  //枠線用黒ペンの指定
+        canvas.fillStyle="#f00";    //塗りつぶし用赤ペンの指定
+        canvas.fillRect(50,50,100,100); //四角形の塗りつぶし
+        canvas.strokeRect(50,50,100,100);   //四角形の描画
+    </script>
+
 </body>
 </html>
