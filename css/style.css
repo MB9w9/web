@@ -49,3 +49,15 @@ li{
 .jobs p:hover{
     background-color: aquamarine;
 }
+
+.fruit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.grape:hover{
+   opacity:0.5 ; 
+}
+
