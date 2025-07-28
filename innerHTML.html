@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textConte/innerHTMLの違い</title>
+</head>
+<body>
+    <h1>textConte/innerHTMLの違い</h1>
+    <div id="target1"></div>
+    <div id="target2"></div>
+    <script>
+        const msg = '<h2>Hello</h2>';
+        const target1 = document.getElementById('target1');
+        const target2 = document.getElementById('target2');
+        target1.textContent = msg;
+        target2.innerHTML = msg;
+    </script>
+</body>
+</html>
