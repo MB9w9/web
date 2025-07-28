@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>各種表示方法</title>
+</head>
+<body>
+    <p>ようこそ</p>
+    <p id="target"></p>
+    <script>
+        // webブラウザのコンソールに表示
+        console.log('Hello(console)');
+        // ポップアップウィンドウに表示
+        window.alert('Hello(Popup)');
+        // DOMを利用してWebブラウザ上に表示
+        const target=document.getElementById('target');
+        target.textContent='Hello(DOM)';
+    </script>
+</body>
+</html>
