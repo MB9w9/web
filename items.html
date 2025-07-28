@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/items.css">
+    <title>Document</title>
+</head>
+<body>
+        <div class="question">
+    <h1>演習</h1>
+    <p>2025年7月28日</p>
+    <hr>
+    <p>下記のリストをJavaScriptで表示する</p>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    
+    </div>
+    <div class="answer">
+    <ol>
+        <li id="list1"></li>
+        <li id="list2"></li>
+        <li id="list3"></li>
+    </ol>
+    <script>
+        const output1="HTML";
+        const output2="CSS";
+        const output3="JavaScript";
+
+        const list1 = document.getElementById('list1');
+        const list2 = document.getElementById('list2');
+        const list3 = document.getElementById('list3');
+        
+        list1.textContent = output1;
+        list2.textContent = output2;
+        list3.textContent = output3;
+    </script>
+    </div>
+</body>
+</html>
