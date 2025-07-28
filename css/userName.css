@@ -1,8 +1,21 @@
 @charset "utf-8";
-div{
+.answer{
     border: double 3px black;
     width: 400px;
     text-align: center;
     padding-top: 10px;
     margin: 0 auto;
+}
+
+.question{
+    border: solid 1px blue;
+    border-radius: 30px;
+    width: 450px;
+    margin: 0 auto 30px auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+hr{
+    margin: 0 10px 0 10px;
 }
