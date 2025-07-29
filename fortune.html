@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fortune.css">
+    <title>fortune</title>
+</head>
+<body>
+
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年7月29日</p>
+        <hr>
+        <p>今日の運勢を0~100点で表示する。
+        ただし、90点以上なら、文字色を赤色、文字サイズを2remに設定する</p>
+    </div>
+
+    <div id="code">
+    <p id="target"></p>
+
+    <script>
+        const value = Math.floor(Math.random() * 101);
+
+        if(value >= 90){
+            const target = document.querySelector('#target');
+            target.style.color = 'red';
+            target.style.fontSize = '2rem';
+        }
+
+        // 結果の表示
+        const target = document.querySelector('#target');
+        target.textContent = `今日の運勢：${value}点`;
+    </script>
+    </div>
+
+</body>
+</html>
