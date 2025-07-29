@@ -1,21 +1,30 @@
 @charset "utf-8";
-.answer{
-    border: double 3px black;
-    width: 400px;
+
+body {
+    width: 500px;
+    margin: 10px auto;
     text-align: center;
-    padding-top: 10px;
-    margin: 0 auto;
 }
 
-.question{
-    border: solid 1px blue;
+li {
+    list-style-position: inside;
+}
+#q {
+    padding: 20px;
+    border: 1px solid blue;
     border-radius: 30px;
-    width: 450px;
-    margin: 0 auto 30px auto;
-    padding-bottom: 20px;
-    text-align: center;
 }
+#ans {
+    margin: 10px auto;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px yellow;
+}
+#code {
+    margin: 1.8rem;
+    padding: 20px;
+    border: 5px double black;
+}
+#code h1 {
+    color: blue;
 
-hr{
-    margin: 0 10px 0 10px;
 }

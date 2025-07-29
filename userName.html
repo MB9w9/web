@@ -7,20 +7,40 @@
     <title>UserName</title>
 </head>
 <body>
-    <div class="question">
-    <h1>演習</h1>
-    <p>2025年7月28日</p>
-    <hr>
-    <p>自分の名前をh1タグ上にJavaScriptを使って表示する</p>
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年7月28日</p>
+        <hr>
+        <p>下記のリストをJavaScriptで表示する</p>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
     </div>
-    <div class="answer">
-    <p>以下の名前はJavaScriptで表示しています</p>
-    <h1 id="userName"></h1>
+    <div id="code">
+        <!-- 結果を表示するolの準備 -->
+        <ol id="result"></ol>
+        <script>
+            //innerHTMLを使用する方法
+            // olタグの取得
+            const result = document.getElementById('result');
+            // liタグを含む文字列をolタグに表示
+            result.innerHTML='<li>HTML</li><li>CSS</li><li>JavaScript</li>';
+
+            //addTagを使用する方法
+            // const result = document.getElementById('result');
+            // const newtag1=document.createElement('li');
+            // newtag1.textContent='HTML';
+            // const newtag2=document.createElement('li');
+            // newtag2.textContent='CSS';
+            // const newtag3=document.createElement('li');
+            // newtag3.textContent='JavaScript';
+            // result.appendChild(newtag1);
+            // result.appendChild(newtag2);
+            // result.appendChild(newtag3);
+            
+        </script>
     </div>
-    <script>
-        const name = "大阪太郎";
-        const userName = document.getElementById('userName');
-        userName.textContent = name;
-    </script>
 </body>
 </html>
