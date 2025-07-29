@@ -20,17 +20,21 @@
     <p id="target"></p>
 
     <script>
+        //0~100の乱数を表示
         const value = Math.floor(Math.random() * 101);
 
+        //結果表示欄の取得
+        const target = document.querySelector('#target');
+
+        //90点以上は文字色・サイズ変更
         if(value >= 90){
-            const target = document.querySelector('#target');
             target.style.color = 'red';
             target.style.fontSize = '2rem';
         }
 
         // 結果の表示
-        const target = document.querySelector('#target');
         target.textContent = `今日の運勢：${value}点`;
+        
     </script>
     </div>
 
