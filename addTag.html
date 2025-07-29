@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addTag</title>
+</head>
+<body>
+    <div id="container">
+        <p>以下のタグはJavaScriptで追加しました</p>
+    </div>
+    <script>
+        // pタグの新規作成
+        const newTag = document.createElement('p');
+        // 表示する文字をtextContentで指定
+        newTag.textContent = 'Hello JavaScript';
+        // 新規タグを追加する親タグの取得
+        const parent = document.getElementById('container');
+        // 取得した親タグの子タグとして作成したタグを追加
+        parent.appendChild(newTag);
+
+    </script>
+</body>
+</html>
