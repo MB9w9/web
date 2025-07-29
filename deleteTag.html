@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deleteTag</title>
+</head>
+<body>
+    <p>HTML</p>
+    <p id="target">CSS</p>
+    <p>JavaScript</p>
+
+    <script>
+        // 削除するタグの特定
+        const target = document.getElementById('target');
+        // タグの削除
+        target.parentElement.removeChild(target);
+    </script>
+</body>
+</html>
