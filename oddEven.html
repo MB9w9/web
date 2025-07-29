@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oddEven</title>
+</head>
+<body>
+    <p>奇数か偶数かの判定</p>
+    <p id="target"></p>
+
+    <script>
+        let result = '奇数' // 判定結果を格納する変数の初期化
+        // 0~10の乱数を生成
+        const value = Math.floor(Math.random() * 11);
+        // 偶数かどうかの判定
+        if(value % 2 === 0){
+            result = '偶数';
+        }
+        // 結果の表示
+        const target = document.querySelector('#target');
+        target.textContent = `${value}は${result}です`;
+
+    </script>
+</body>
+</html>
