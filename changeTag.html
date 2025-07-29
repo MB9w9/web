@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changeTag</title>
+</head>
+<body>
+    <h1 id="target">Hello JavaScript</h1>
+    <script>
+        // 置換後のタグの新規作成
+        const newTag = document.createElement('p');
+        // 対象となる置換元のタグの取得
+        const oldTag = document.getElementById('target');
+        // 置換元のタグの現在の文字を取得し、新規タグに設定
+        newTag.textContent = oldTag.textContent;
+        // タグの置換
+        oldTag.parentElement.replaceChild(newTag, oldTag);
+    </script>
+</body>
+</html>
