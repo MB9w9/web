@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changeColor</title>
+</head>
+<body>
+    <p class="targets">HTML</p>
+    <p>CSS</p>
+    <p class="targets">JavaScript</p>
+
+    <script>
+        // class="target"が設定されている全てのタグを配列として取得
+        const targets = document.getElementsByClassName('targets');
+        // for文で一個ずつ対象タグを取り出し、文字色を設定
+        // 文字サイズはcssだとfont-sizeだが、JavaScriptだとfontSize(-は減算扱いになる為)
+        for(let i=0; i<targets.length; i++){
+            targets[i].style.color = 'red';
+            targets[i].style.fontSize = '1.5rem';
+        }
+    </script>
+
+</body>
+</html>
