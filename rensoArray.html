@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rensoArray</title>
+</head>
+<body>
+    <p>都道府県名と県庁所在地一覧</p>
+    <ul id="preflist">
+        <script>
+            let items = '';
+            // 連想配列の初期化
+            const prefs = {大阪府:'★大阪市', 京都府:'★京都市', 兵庫県:'★神戸市'};
+            // 拡張for文を利用し、連想配列のキーを取得
+            for(let key in prefs){
+                items += `<li>${key}-${prefs[key]}`;
+                console.log(key);
+                console.log(prefs[key]);
+            }
+            document.getElementById('preflist').innerHTML = items;
+        </script>
+    </ul>
+</body>
+</html>
