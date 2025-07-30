@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <script>
+        const values = [10, 20, 30, 40, 50,];
+        // 配列から個別にデータを取り出す通常の記述
+        const value1 = values[0];
+        const value2 = values[1];
+        // 分割代入を利用した記述
+        const [val1, val2] = values;
+        // 結果の表示
+        document.getElementById('result1').textContent = value1 + value2;
+        document.getElementById('result2').textContent = val1 + val2;
+    </script>
+</body>
+</html>

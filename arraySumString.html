@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="arrayValue"></p>
+    <p id="resultValue"></p>
+    <p id="resultString"></p>
+    <script>
+        let sumValue = 0;
+        let sumString = 0;
+        const values = ['10','20','30'];
+        for(let value of values){
+            sumValue += Number(value);
+
+            sumString += value;
+        }
+        document.getElementById('arrayValue').textContent = values.toString();
+        document.getElementById('resultValue').textContent = `合計=${sumValue}`;
+        document.getElementById('resultString').textContent = `合計=${sumString}`;
+    </script>
+</body>
+</html>
