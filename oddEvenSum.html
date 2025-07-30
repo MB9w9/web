@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/oddEvenSum.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年7月30日</p>
+        <hr>
+        <p>0~100の奇数/偶数の合計を表形式で表示する</p>
+    </div>
+
+    <div id="code">
+    <table border="1">
+        <thead>
+            <tr>
+            <td colspan="2">範囲：0~100</td>
+            </tr>
+        </thead>
+        <tr>
+            <td>奇数の合計</td>
+            <td id="odd"></td>
+        </tr>
+        <tr>
+            <td>偶数の合計</td>
+            <td id="even"></td>
+        </tr>        
+    </table>
+    </div>
+
+    <script>
+        let sumOdd = 0;
+        let sumEven = 0;
+
+        for(let i=0; i<=100; i++){
+            if(i%2 === 0){
+                sumEven += i;
+            }else{
+                sumOdd += i;
+            }        
+        }
+
+        // 奇数の合計を表示
+        let odd = document.getElementById('odd');
+        odd.textContent = sumOdd;
+        // 偶数の合計を表示
+        let even = document.getElementById('even');
+        even.textContent = sumEven;
+
+    </script>
+</body>
+</html>
