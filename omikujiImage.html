@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/omikujiImage.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="q">
+           <h1>演習</h1>
+        <p>2025年7月30日</p>
+        <hr>
+        <p>今日のおみくじの結果を画像で表示する</p>
+</div>
+
+    <div id="code">
+        <h1>今日の運勢</h1>
+        <img src="" alt="" id="target">
+
+        <script>
+            const omikuji = ['大吉', '中吉', '中吉', '凶'];
+            // おみくじの番号（0~3）を乱数で求める
+            const no = Math.floor(Math.random() * 4);
+
+            if(no === 0){
+                document.querySelector('#target').src='images/daikichi.png';
+                document.querySelector('#target').alt='大吉';
+            }else if(no === 1){
+                document.querySelector('#target').src='images/chukichi.png';
+                document.querySelector('#target').alt='中吉';
+            }else if(no === 2){
+                document.querySelector('#target').src='images/kichi.png';
+                document.querySelector('#target').alt='吉';
+            }else{
+                document.querySelector('#target').src='images/kyo.png';
+                document.querySelector('#target').alt='凶';
+            }
+
+        </script>
+    </div>
+</body>
+</html>

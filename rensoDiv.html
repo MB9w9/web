@@ -10,6 +10,9 @@
     <script>
         const userInfo = { name:'大阪太郎',age:30};
 
+        // ageには値「30」がそのまま入る。
+        // nameの値「大阪太郎」はそのままだが、プロパティの別名「test」が設定される。
+        // これにより、値「大阪太郎」はプロパティ名「name」でも「test」でも取り出せるようになる。
         const {age,name:test} = userInfo;
 
         document.getElementById('result').textContent = `${test}(${age}歳)`;
