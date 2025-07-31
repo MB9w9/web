@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>today</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1;
+        const date = now.getDate();
+        const result = document.getElementById('result');
+        result.textContent = `今日の日付：${year}年${month}月${date}日`;
+    </script>
+</body>
+</html>
