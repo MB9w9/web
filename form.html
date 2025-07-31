@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        氏名　：<input type="text" name="userName" placeholder="氏名の入力"><br>
+        備考欄：<textarea name="remarks" rows="4" cols="20" placeholder="ご自由にご記入ください">test</textarea><br>
+        件名　：<input type="radio" name="prefName" value="大阪府">大阪府
+            <input type="radio" name="prefName" value="京都府" checked>京都府<br>
+        好きな野球チーム：<input type="checkbox" name="teams" value="giants">巨人
+            <input type="checkbox" name="teams" value="tigers">阪神
+            <input type="checkbox" name="teams" value="swallows">ヤクルト<br>
+
+            <!-- labelタグをつければ、文字をクリックしても選択できるようになる -->
+            <input type="radio" name="web" id="html" value="1">
+            <label for="html">HTML</label>
+            <!-- ↑↓どちらの書き方でもOK -->
+            <label><input type="radio" name="web" value="2">CSS</label>
+
+            <input type="radio" name="web" value="3">JavaScript<br>
+
+            年代　：<select name="age">
+                        <option value="10">10代</option>
+                        <option value="20">20代</option>
+                        <option value="30">30代</option>
+                        <option value="40">40代</option>
+                        <option value="50">その他</option>
+                    </select>
+    </form>
+
+
+
+
+    
+</body>
+</html>
