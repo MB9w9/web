@@ -20,7 +20,7 @@
         <img src="" alt="" id="target">
 
         <script>
-            const omikuji = ['大吉', '中吉', '中吉', '凶'];
+            const omikuji = ['大吉', '中吉', '吉', '凶'];
             // おみくじの番号（0~3）を乱数で求める
             const no = Math.floor(Math.random() * 4);
 
@@ -40,5 +40,27 @@
 
         </script>
     </div>
+
+    <!-- 別解（if文を使わない方法）
+     
+        <div id="code">
+        <h1>今日の運勢</h1>
+        <img src="" alt="" id="omikuji" width="220">
+        </div>
+
+        <script>
+            // おみくじの画像ファイル名を配列で初期化
+            const omikujiImgs = ['daikichi.png','chuukichi.png','suekichi.png','kyo.png'];
+            const omikuji = ['大吉','中吉','末吉','凶'];
+            // おみくじの番号を乱数で作成
+            const no = Math.floor(Math.random()*4);
+            // 画像を表示するimgタグの取得
+            const img = document.getElementById('omikuji');
+            // 表示する画像をimgタグのsrc属性に設定
+            img.src=`images/${omikujiImgs[no]}`;
+            img.alt=omikuji[no];
+        </script>
+    
+    -->
 </body>
 </html>
