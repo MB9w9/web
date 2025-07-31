@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数のサンプル</title>
+    <script>
+        function getGreeting(name = 'ゲスト'){
+            return `ようこそ、${name}さん`;
+        }
+    </script>
+</head>
+<body>
+    <p id="result1"></p>
+    <p id="result2"></p>
+
+    <script>
+        document.getElementById('result1').textContent = getGreeting();
+        document.getElementById('result2').textContent = getGreeting('大阪太郎');
+    </script>
+</body>
+</html>
