@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/todayEx.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年7月31日</p>
+        <hr>
+        <p>今日の日時と曜日を表示する。<br>
+        木曜日なら掃除の日と追加表示する。</p>
+    </div>
+
+    <div id="code">
+    <p id="target"></p>
+    <p id="target2"></p>
+
+    <script>
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1;
+        const date = now.getDate();
+        const day = now.getDay();
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+
+        const days = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)',];
+        
+        
+        document.querySelector('#target').textContent
+         = `今日の日時：${year}年${month}月${date}日${days[day]}
+         ${hour}時${minute}分${second}秒`;
+
+        if(day === 4){
+            document.querySelector('#target2').textContent = `掃除の日`;
+        }
+    </script>
+
+    </div>
+</body>
+</html>
