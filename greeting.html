@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/question.css">
+    <title>greeting</title>
+</head>
+<body>
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年8月1日</p>
+        <hr>
+        <p>日本語/英語のボタンを用意し、クリックされたら別々にメッセージを表示する</p>
+        <p>１．[日本語]ボタン→「こんにちは」<br>
+            ２．[英語]ボタン→「Hello」</p>
+    </div>
+
+    <div id="code">
+    <input type="button" value="日本語" id="btnJp">
+    <input type="button" value="英語" id="btnEn">
+    <p id="greeting"></p>
+
+    <script>
+        // ボタンを取得
+        const btnJp = document.querySelector('#btnJp');
+        const btnEn = document.querySelector('#btnEn');
+        // 表示欄を取得
+        const greeting = document.querySelector('#greeting');
+
+        // ボタンがクリックされたときのイベント処理を登録
+        btnJp.addEventListener('click', ()=>{
+            greeting.textContent = 'こんにちは';
+        })
+
+        btnEn.addEventListener('click', ()=>{
+            greeting.textContent = 'Hello';
+        })
+
+    </script>
+
+    </div>
+</body>
+</html>
