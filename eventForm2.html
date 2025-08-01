@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventForm2</title>
+</head>
+<body>
+    <p>背景色の選択</p>
+    <input type="radio" name="color" id="red" value="#f00">赤
+    <input type="radio" name="color" id="green" value="#0f0">緑
+    <input type="radio" name="color" id="blue" value="#00f">青
+
+    <script>
+        // name="color"が設定されているタグを全て取得（配列に保存）
+        const colors = document.getElementsByName('color');
+
+        // 配列から一つずつ取り出し
+        colors.forEach((item) =>{
+            // クリック時のイベント処理を登録
+            item.addEventListener('click', ()=>{
+                // どのラジオボタンが選択されているか1個ずつチェック
+                colors.forEach((item) =>{
+                    // 取り出したラジオボタンが選択されているのかチェック
+                    if(item.checked){
+                        // 選択されているラジオボタンのvalue値を背景色に設定
+                        document.bgColor = item.value;
+                    }
+                })
+            })
+        })
+
+    </script>
+
+</body>
+</html>
