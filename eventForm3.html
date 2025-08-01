@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventForm3</title>
+</head>
+<body>
+    <input type="checkbox" name="confirm" id="confirm">内容を確認しました<br>
+    <input type="button" value="データの送信" id="btn" disabled>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const confirm = document.getElementById('confirm');
+
+        // チェックボックスがクリックされたときのイベント処理を登録
+        confirm.addEventListener('click', ()=>{
+            // チェックボックスがクリックされているかどうか
+            if(confirm.checked){
+                // チェックされている場合、ボタンを利用可能に設定
+                btn.disabled = false;
+            }else{
+                // チェックされていない場合、ボタンを利用不可に設定
+                btn.disabled = true;
+            }
+        })
+    </script>
+</body>
+</html>
