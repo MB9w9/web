@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event3</title>
+</head>
+<body>
+    <p id="target">ここをクリックするとアラートが表示</p>
+    <P id="target2"></P>
+    <script>
+        const target = document.querySelector('#target');
+        // イベントハンドラの登録（ラムダ式）
+        const showMessage = ()=> window.alert('クリックされました');
+        // メソッドを使ってイベント処理を登録
+        target.addEventListener('click', showMessage);
+        // 同じ対象物に対して別のイベント処理を登録 
+        target.addEventListener('click', ()=> window.alert('二つのメッセージが表示されました'));
+
+    </script>
+</body>
+</html>
