@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/question.css">
+    <script>
+         // 引数の値を小数第2位で四捨五入する関数の定義
+        const roundOff = value => {
+            return Math.round(value*100)/100
+        };
+    </script>
+</head>
+<body>
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年8月1日</p>
+        <hr>
+        <p>身長(cm)、体重(kg)を入力し、[計算]ボタンを押したら<br>
+            BMI値と標準体重(kg)を表示する</p>
+
+    </div>
+    <div id="code">
+        <form>
+            <!-- 身長(cm) <input type="number" name="height" id="height" step="0.1"><br> -->
+            <!-- 体重(kg) <input type="number" name="weight" id="weight" step="0.1"><br> -->
+            <div class="input-group mb-3">
+                <label for="height" class="input-group-text">身長(cm)</label>
+                <input type="number" name="height" id="height" step="0.1" class="form-control" placeholder="cmで入力して下さい" aria-label="height" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <label for="weight" class="input-group-text">体重(kg)</label>
+                <input type="number" name="weight" id="weight" step="0.1" class="form-control" placeholder="kgで入力して下さい">
+                
+            </div>
+            <div class="d-grid gap-2">
+                <input type="button" value="計算" id="calcBtn" class="btn btn-primary">
+            </div>
+            <p id="error"></p>
+        </form>
+        <hr>
+        <p id="bmi"></p>
+        <p id="stdW"></p>
+    </div>
+    <script>
+        // 計算ボタンの取得およびクリック時のイベント処理の登録
+        document.getElementById('calcBtn').addEventListener('click',()=>{
+            // 身長のデータをフォームのテキストボックスから取得
+            const height = document.getElementById('height').value;
+            // 体重のデータをフォームのテキストボックスから取得
+            const weight = document.getElementById('weight').value;
+            
+            const error = document.getElementById('error');
+
+            // データが入力されているかどうかのチェック
+            if(height==='' || weight===''||weight<0||height<0){
+                // window.alert('未入力のデータがあります');
+                // return;  // ここでイベント処理を終了
+                error.textContent='未入力のデータがあります';
+                error.style.color = 'red';
+                return;
+            }else {
+                error.textContent='';
+            }
+            
+            // BMIの計算(身長はcmをmに変換)
+            const bmi = roundOff(weight/Math.pow((height/100),2));
+            // 標準体重の計算(身長はcmをmに変換)
+            let stdW = Math.pow((height/100.0),2)*22;
+            stdW = stdW.toFixed(2);
+
+            // 結果をページに表示
+            document.getElementById('bmi').textContent=`BMI : ${bmi}`;
+            document.getElementById('stdW').textContent=`標準体重 : ${stdW}kg`;
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

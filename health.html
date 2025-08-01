@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/health.css">
+    <title>health</title>
+</head>
+<body>
+
+    
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年8月1日</p>
+        <hr>
+        <p>身長（cm）、体重（kg）を入力し、[計算]ボタンを押したら<br>
+            BMI値と標準体重（kg）を表示する</p>
+    </div>
+    
+    <div id="code">
+        <form>
+            身長（cm）<input type="number" name="height" id="height"><br>
+            体重（kg）<input type="number" name="weight" id="weight"><br>
+            <input type="button" value="計算" id="btn"><br>
+        </form>
+
+        <hr>
+
+        <p id="bmi"></p>
+        <p id="tekisei"></p>
+    </div>
+
+    <script>
+        // ボタンを取得し、イベントを登録
+        document.querySelector('#btn').addEventListener('click', ()=>{
+            // 身長・体重の値を取得
+            const height = document.querySelector('#height').value;
+            const weight = document.querySelector('#weight').value;
+
+            // console.log(height);
+            // console.log(weight);
+
+            // BMI・標準体重を計算
+            let bmi = Math.round(weight / (height/100) / (height/100));
+            let tekisei = Math.round((height/100) * (height/100) * 22);
+
+            // console.log(bmi);
+            // console.log(tekisei);
+
+            // 表示欄を取得し、BMI・適正体重を表示
+            document.querySelector('#bmi').textContent = `BMI：${bmi}`;
+            document.querySelector('#tekisei').textContent = `適正体重：${tekisei}kg`;
+        })
+
+    </script>
+
+
+    
+</body>
+</html>
