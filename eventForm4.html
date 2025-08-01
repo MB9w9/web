@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #target {color: blue;}
+        #target.red {color: red;}
+    </style>
+</head>
+<body>
+    <p id="target">ようこそ</p>
+    <button id="btn">赤⇔青</button>  
+    <script>
+        const target = document.getElementById('target');
+
+        document.getElementById('btn').addEventListener('click',()=>{
+            target.classList.toggle('red');
+        })
+    </script>
+</body>
+</html>
