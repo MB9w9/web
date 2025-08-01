@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventForm1</title>
+</head>
+<body>
+    <p>氏名を入力し、表示ボタンを押してください。</p>
+    <hr>
+    <form>
+        <input type="text" name="userName" id="userName"><br>
+        <input type="button" value="表示" id="btnShow"><br>
+    </form>
+
+    <hr>
+    
+    <script>
+        // 対象のボタンにイベント処理の登録
+        document.getElementById('btnShow').addEventListener('click', ()=>{
+        // id="userName"のコントロールに入力されている値を取得
+        let userName = document.getElementById('userName').value;
+        // 氏名の入力/未入力の判定を行い、未入力なら「未入力」という値を代入
+        userName = (userName === '')? '未入力です' : `ようこそ、${userName}さん`;
+        document.getElementById('result').textContent = userName;
+        });
+
+    </script>
+</body>
+</html>
