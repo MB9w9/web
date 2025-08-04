@@ -15,9 +15,10 @@ btn.addEventListener('click', ()=>{
             counter.textContent = `残り：${count}秒`;
         }else{
             clearInterval() // 停止
+            img.src = 'Childcare-cute-2504_14-90.webp';
         }
     }, 1000);    // 1秒ごとに実行
 
-    img.src = '/image/daikichi.png'
+    
 
 })
