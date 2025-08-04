@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/question.css">
+    <script src="js/imageList.js" defer></script>
+    <style>
+
+
+        .img-list{
+            width: 50px;
+        }
+
+        .output-frame{
+            height: 400px;
+        }
+    </style>
+    <title>imageList</title>
+</head>
+<body>
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年8月4日</p>
+        <hr>
+        <p>縮小画像(サムネイル)をクリックすると、上部に拡大表示される。<br>
+        htmlのファイルとJavaScriptのファイルは分割して作成すること</p>
+    </div>
+
+    <div id="code">
+        <div class="output-frame">
+        <img src="" alt="" id="output" height="400px">
+        </div>
+
+        <img src="images/daikichi.png" alt="大吉" id="daikichi" class="img-list">
+        <img src="images/chukichi.png" alt="中吉" id="chukichi" class="img-list">
+        <img src="images/kichi.png" alt="吉" id="kichi" class="img-list">
+        <img src="images/kyo.png" alt="凶" id="kyo" class="img-list">
+    </div>
+
+</body>
+</html>
