@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習</title>
+    <link rel="stylesheet" href="css/question.css">
+</head>
+<body>
+    <div id="q">
+        <h1>演習</h1>
+        <p>2025年8月1日</p>
+        <hr>
+        <p>日本語/英語のボタンを用意し、クリックされたら別々にメッセージを表示する</p>
+        <ol>
+            <li>[日本語]ボタン→「こんにちは」</li>
+            <li>[英語]ボタン→「Hello」</li>
+        </ol>
+    </div>
+    <div id="code">
+        <form>
+            <input type="button" value="日本語" id="btnJp" class="btn">
+            <input type="button" value="英語" id="btnEn" class="btn">
+        </form>
+        <p id="result"></p>
+    </div>
+    <script>
+        // 結果を表示するpタグの取得
+        const result = document.getElementById('result');
+        
+        //---------------------------------------------------------------------
+        // 別々にイベントハンドラ(アロー関数)を指定
+        //---------------------------------------------------------------------
+        document.getElementById('btnJp').addEventListener('click',()=>{
+            result.textContent = 'こんにちは';
+        });
+        document.getElementById('btnEn').addEventListener('click',()=>{
+            result.textContent = 'Hello';
+        });
+        
+        //---------------------------------------------------------------------
+        // ボタンを一括で取得(querySelecterAll()し、同じイベントハンドラを指定
+        //---------------------------------------------------------------------        
+        // const btns = document.querySelectorAll('.btn');
+        // //拡張for文で1個ずつ取り出し、イベント処理を登録
+        // for(let btn of btns){
+        //     // オブジェクト「e:変数名は自由」はクリックされたボタンの情報が格納されているオブジェクト
+        //     btn.addEventListener('click', (e) => {
+        //         // 「e.target.id」はクリックされたボタンのid属性値
+        //         const whichBtn = e.target.id;
+        //         // 属性値によってどちらのボタンがクリックされたのかを判定
+        //         switch(whichBtn){
+        //             case 'btnJp': result.textContent='こんにちは';break;
+        //             case 'btnEn': result.textContent='Hello';break;
+        //         }
+        //     });
+        // }
+    </script>
+</body>
+</html>
